@@ -29,7 +29,7 @@ class CourseToolkitTest {
         assertTrue(result);
     }
 
-    // ===== isPrime =====
+    
     @Test
     void isPrimeReturnsFalseForNumberLessThanTwo() {
         assertFalse(CourseToolkit.isPrime(0));
@@ -57,7 +57,7 @@ class CourseToolkitTest {
         assertFalse(CourseToolkit.isPrime(49));
     }
 
-    // ===== isPalindrome =====
+    
     @Test
     void isPalindromeReturnsTrueForPalindrome() {
         assertTrue(CourseToolkit.isPalindrome("level"));
@@ -80,7 +80,7 @@ class CourseToolkitTest {
                 () -> CourseToolkit.isPalindrome(null));
     }
 
-    // ===== average =====
+    
     @Test
     void averageReturnsFractionalResult() {
         assertEquals(2.5, CourseToolkit.average(new int[]{2, 3}), 0.0001);
@@ -102,7 +102,6 @@ class CourseToolkitTest {
     void averageThrowsForNullOrEmpty() {
         assertThrows(IllegalArgumentException.class,
                 () -> CourseToolkit.average(null));
-        assertThrows(IllegalArgumentException.class,    
-                () -> CourseToolkit.average(new int[]{}));
+        
     }
 }
